@@ -1,0 +1,15 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## 0.1.1 (2024-01-12)
+
+
+### Bug Fixes
+
+* equals compare fix ([31b0582](https://github.com/aceHubert/ace-util/commit/31b0582ac95afa7e0d2dc067576dea6b92d65d64))
+
+
+
+# 0.0.0 (2023-07-31)
