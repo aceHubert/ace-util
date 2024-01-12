@@ -94,9 +94,7 @@ export function equals(x: any, y: any): boolean {
     p = newX[p];
     const a = x[p] instanceof Object;
     const b = y[p] instanceof Object;
-    if (a && b) {
-      return equals(x[p], y[p]);
-    } else if (x[p] !== y[p]) {
+    if ((a && b && !equals(x[p], y[p])) || (!(a && b) && x[p] !== y[p])) {
       return false;
     }
   }
