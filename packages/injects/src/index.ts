@@ -77,3 +77,5 @@ export const globalStorage = Inject.buildPreinitializedStorage({});
  * Global Inject instalce
  */
 export const globalInject = createInject(globalStorage);
+
+export * from './types';
