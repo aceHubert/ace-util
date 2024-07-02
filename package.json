@@ -22,7 +22,6 @@
     "changelog": "node ./scripts/genChangelog.js",
     "commit": "git-cz"
   },
-  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.9.0",
     "@babel/core": "^7.9.0",
