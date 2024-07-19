@@ -8,15 +8,15 @@
     "url": "https://github.com/aceHubert/ace-util.git"
   },
   "scripts": {
-    "build": "lerna run build --sort --stream --scope=@ace-util/*",
-    "test": "jest --coverage --passWithNoTests",
     "prepublishOnly": "yarn install --ignore-scripts && yarn changelog && yarn build && yarn test",
+    "build": "lerna run build --sort --stream --scope='@ace-util/*'",
     "release": "lerna publish",
     "release:git": "lerna publish from-git",
     "release:package": "lerna publish from-package",
     "clean": "lerna clean --yes",
     "lint": "lerna run lint --parallel --stream",
     "lint:fix": "lerna run lint:fix --parallel",
+    "test": "jest --coverage --passWithNoTests",
     "prettier": "node ./scripts/prettier.js",
     "prettier:all": "node ./scripts/prettier.js write",
     "changelog": "node ./scripts/genChangelog.js",
@@ -68,6 +68,7 @@
     "nodemon": "^2.0.2",
     "postcss": "^8.4.12",
     "prettier": "^2.0.5",
+    "rimraf": "^6.0.1",
     "rollup": "^1.27.2",
     "rollup-plugin-dts": "^4.2.1",
     "rollup-plugin-external-globals": "^0.6.1",
@@ -99,7 +100,6 @@
   "workspaces": {
     "packages": [
       "packages/*"
-    ],
-    "nohoist": []
+    ]
   }
 }
