@@ -14,6 +14,10 @@ on:
 permissions:
   contents: write
 
+env:
+  # https://github.com/renovatebot/renovate/discussions/9481?sort=old#discussioncomment-660412
+  YARN_ENABLE_IMMUTABLE_INSTALLS: false
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -40,7 +44,7 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn install --mode=skip-build
+        run: yarn version && yarn install --mode=skip-build --immutable
       - name: Configure Git User
         run: |
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
