@@ -8,7 +8,7 @@
     "url": "https://github.com/aceHubert/ace-util.git"
   },
   "scripts": {
-    "prepublishOnly": "yarn install --ignore-scripts && yarn changelog && yarn build && yarn test",
+    "prepublishOnly": "yarn install --mode=skip-build && yarn changelog && yarn build && yarn test",
     "build": "lerna run build --sort --stream --scope='@ace-util/*'",
     "release": "lerna publish",
     "release:git": "lerna publish from-git",
