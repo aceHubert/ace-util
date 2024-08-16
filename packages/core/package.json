@@ -1,6 +1,6 @@
 {
   "name": "@ace-util/core",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Hubert<yi.xiang@live.com>",
   "description": "Utils.",
   "main": "lib/index.js",

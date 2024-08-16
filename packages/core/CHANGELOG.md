@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/aceHubert/ace-util/compare/@ace-util/core@0.2.1...@ace-util/core@0.2.2) (2024-08-16)
+
+
+### Bug Fixes
+
+* 升级yarn后打包vesion错误 ([f76e76c](https://github.com/aceHubert/ace-util/commit/f76e76cc05156d9dea63c53a2035dff5db0a2aff))
+
+
+
+
+
 ## [0.2.1](https://github.com/aceHubert/ace-util/compare/@ace-util/core@0.2.0...@ace-util/core@0.2.1) (2024-03-26)
 
 **Note:** Version bump only for package @ace-util/core
