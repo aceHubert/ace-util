@@ -6,7 +6,7 @@ export * from './env';
 export * from './json';
 export * from './object';
 export * from './path';
-export * from './promisify';
+export * from './promise';
 export * from './tools';
 export * from './types';
 export * from './version';
