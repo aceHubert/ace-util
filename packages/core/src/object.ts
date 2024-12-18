@@ -47,7 +47,7 @@ export function def(
 }
 
 const hasOwnProperty = Object.prototype.hasOwnProperty;
-export function hasOwn(obj: Record<string, any> | any[], key: string): boolean {
+export function hasOwn(obj: Record<PropertyKey, any> | any[], key: PropertyKey): boolean {
   return hasOwnProperty.call(obj, key);
 }
 
