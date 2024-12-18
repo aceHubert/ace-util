@@ -8,15 +8,17 @@ import { InjectFunction, InjectResult } from './types';
  * create a new Inject instance
  * @param store Store
  */
-export function createInject(store: Record<string, InstanceType<typeof Inject>>): InjectFunction {
-  function inject(tag: string): InjectResult;
-  function inject(tag: string, functionToAdd: Function, priority?: number, acceptedArgs?: number): void;
-  function inject(
-    tag: string,
-    functionToAdd?: Function,
+export function createInject<T extends Record<string, (...args: any) => any> = {}>(
+  store: Record<keyof T, InstanceType<typeof Inject>>,
+): InjectFunction<T> {
+  function inject<K extends keyof T>(tag: K): InjectResult<T[K]>;
+  function inject<K extends keyof T>(tag: K, functionToAdd: T[K], priority?: number, acceptedArgs?: number): void;
+  function inject<K extends keyof T>(
+    tag: K,
+    functionToAdd?: T[K],
     priority?: number,
     acceptedArgs?: number,
-  ): InjectResult | void {
+  ): InjectResult<T[K]> | void {
     if (functionToAdd) {
       if (!hasOwn(store, tag)) {
         store[tag] = new Inject();
@@ -25,14 +27,14 @@ export function createInject(store: Record<string, InstanceType<typeof Inject>>)
       store[tag].addFilter(functionToAdd, priority, acceptedArgs);
     } else {
       return {
-        has(functionToCheck: Function | boolean) {
+        has(functionToCheck: T[K] | boolean) {
           if (!hasOwn(store, tag)) {
             return false;
           }
 
           return store[tag].hasFilter(functionToCheck);
         },
-        remove(functionToRemove: Function, priority = 10) {
+        remove(functionToRemove: T[K], priority = 10) {
           let removed = false;
           if (hasOwn(store, tag)) {
             removed = store[tag].removeFilter(functionToRemove, priority);
@@ -61,7 +63,7 @@ export function createInject(store: Record<string, InstanceType<typeof Inject>>)
           }
           return Promise.resolve();
         },
-      } as InjectResult;
+      } as InjectResult<T[K]>;
     }
   }
 
