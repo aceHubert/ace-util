@@ -1,6 +1,6 @@
 {
   "name": "@ace-util/injects",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "author": "Hubert<yi.xiang@live.com>",
   "description": "Utils.",
   "main": "lib/index.js",
