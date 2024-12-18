@@ -1,18 +1,20 @@
+type GetRestArgs<T extends any[]> = T extends [infer A, ...infer B] ? B : never;
+
 /**
  * Inject result
  */
-export type InjectResult = {
+export type InjectResult<F extends (...args: any) => any> = {
   /**
    * Has function form injection
    * @param functionToCheck Function to check
    */
-  has(functionToCheck?: Function | boolean): Function | boolean;
+  has(functionToCheck?: F | boolean): F | boolean;
   /**
    * Remove function form injection
    * @param functionToRemove Function to remove
    * @param priority Priority
    */
-  remove(functionToRemove: Function, priority?: number): boolean;
+  remove(functionToRemove: F, priority?: number): boolean;
   /**
    * Remove all functions form injection
    * @param priority Priority
@@ -23,25 +25,25 @@ export type InjectResult = {
    * @param value Value to filter
    * @param args Arguments
    */
-  filter<T = unknown, R = T>(value: T, ...args: unknown[]): Promise<R>;
+  filter(value: Parameters<F>, ...args: GetRestArgs<Parameters<F>>): Promise<Parameters<F>>;
 
   /**
    * Execute from injection tag, won't have a return value
    * @param args Arguments
    */
-  exec(...args: unknown[]): Promise<void>;
+  exec(...args: Parameters<F>): Promise<void>;
 };
 
 /**
  * Injection instance
  */
-export interface InjectFunction {
+export interface InjectFunction<T extends Record<string, (...args: any) => any>> {
   /**
    * Execute a tag
    */
-  (tag: string): InjectResult;
+  <K extends keyof T>(tag: K): InjectResult<T[K]>;
   /**
    * Inject function to a tag
    */
-  (tag: string, functionToAdd: Function, priority?: number, acceptedArgs?: number): void;
+  <K extends keyof T>(tag: K, functionToAdd: T[K], priority?: number, acceptedArgs?: number): void;
 }
