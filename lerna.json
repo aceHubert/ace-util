@@ -1,7 +1,6 @@
 {
   "packages": ["packages/*", "docs"],
   "npmClient": "yarn",
-  "useWorkspaces": true,
   "command": {
     "publish": {
       "conventionalCommits": true,
@@ -9,12 +8,13 @@
       "gitReset": true,
       "allowBranch": ["master", "next"],
       "ignoreChanges": [
+        "*/package.json",
         "**/CHANGELOG.md",
         "**/node_modules/**",
-        "**/package.json",
         "**/*.md",
         "**/test/**",
-        "**/dev/**"
+        "**/dev/**",
+        "**/src/version.ts"
       ],
       "message": "chore(release): 😊 publish"
     }
