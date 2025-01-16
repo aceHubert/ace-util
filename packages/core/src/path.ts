@@ -34,30 +34,30 @@ export function absoluteGo(url: string, replace = false) {
  * @param {string} key query key
  * @param {string} search search, default: location.search
  */
-export const getQueryValue = function (key: string, search?: string) {
+export function getQueryValue(key: string, search?: string) {
   const _search = search ? '&' + search : location.search.replace(/(^\?+)|(#\S*$)/g, '');
   const query = _search.match(new RegExp('(^|&)' + key + '=([^&]*)(&|$)', 'i'));
   return !query ? '' : decodeURIComponent(query[2]);
-};
+}
 
 /**
  * Get values from search by specified keys.
  * @param keys key query keys
  * @param search search, default: location.search
  */
-export const getQueryValues = function (keys: string[], search?: string) {
+export function getQueryValues(keys: string[], search?: string) {
   return keys.reduce((prev, curr) => {
     prev[curr] = getQueryValue(curr, search);
     return prev;
   }, {} as { [K in typeof keys[number]]: string });
-};
+}
 
 /**
  * Set values to uri search
  * @param values key/value
  * @param url url string
  */
-export const setQueryValues = function (values: Array<{ key: string; value: any }> | Record<string, any>, url: string) {
+export function setQueryValues(values: Array<{ key: string; value: any }> | Record<string, any>, url: string) {
   let baseWithSearch = url.split('#')[0];
   const hash = url.split('#')[1];
   let arrayValues: Array<{ key: string; value: any }> = [];
@@ -87,4 +87,4 @@ export const setQueryValues = function (values: Array<{ key: string; value: any 
     url = baseWithSearch;
   }
   return url;
-};
+}
