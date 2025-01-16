@@ -8,15 +8,16 @@
     "url": "https://github.com/aceHubert/ace-util.git"
   },
   "scripts": {
-    "prepublishOnly": "yarn install --mode=skip-build && yarn changelog && yarn build && yarn test",
     "build": "lerna run build --sort --stream --scope='@ace-util/*'",
+    "test": "jest --coverage --passWithNoTests",
+    "version": "lerna run build --sort --stream --scope='@ace-util/*'",
+    "prepublishOnly": "yarn install --mode=skip-build && yarn changelog && yarn build && yarn test",
     "release": "lerna publish",
     "release:git": "lerna publish from-git",
     "release:package": "lerna publish from-package",
     "clean": "lerna clean --yes",
     "lint": "lerna run lint --parallel --stream",
     "lint:fix": "lerna run lint:fix --parallel",
-    "test": "jest --coverage --passWithNoTests",
     "prettier": "node ./scripts/prettier.js",
     "prettier:all": "node ./scripts/prettier.js write",
     "changelog": "node ./scripts/genChangelog.js",
