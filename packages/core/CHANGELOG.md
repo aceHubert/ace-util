@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/aceHubert/ace-util/compare/@ace-util/core@0.4.0...@ace-util/core@0.4.1) (2025-01-16)
+
+### Performance Improvements
+
+- const function format ([5a52c4a](https://github.com/aceHubert/ace-util/commit/5a52c4a636dedf97b6e740068d268a6c6cf9ec9d))
+
 # [0.4.0](https://github.com/aceHubert/ace-util/compare/@ace-util/core@0.3.2...@ace-util/core@0.4.0) (2025-01-16)
 
 ### Features
