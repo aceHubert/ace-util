@@ -5,7 +5,7 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@ace-util/core@^0.3.2, @ace-util/core@workspace:packages/core":
+"@ace-util/core@^0.4.0, @ace-util/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@ace-util/core@workspace:packages/core"
   dependencies:
@@ -18,7 +18,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ace-util/injects@workspace:packages/injects"
   dependencies:
-    "@ace-util/core": ^0.3.2
+    "@ace-util/core": ^0.4.0
     "@types/warning": ^3.0.3
     warning: ^4.0.3
   languageName: unknown
