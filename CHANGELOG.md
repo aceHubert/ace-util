@@ -1,3 +1,55 @@
+Generating changelog from @ace-util/injects@0.3.2 to HEAD
+
+## @ace-util/injects@0.3.9 (2025-01-17)
+
+#### :rocket: New Feature
+* `core`, `enquire`
+  * [#9](https://github.com/aceHubert/ace-util/pull/9) feat: move out enquire from core package ([@aceHubert](https://github.com/aceHubert))
+
+#### Committers: 1
+- Hubert X ([@aceHubert](https://github.com/aceHubert))
+
+
+## @ace-util/enquire@0.1.0 (2025-01-17)
+
+#### :rocket: New Feature
+* `core`, `enquire`
+  * [#9](https://github.com/aceHubert/ace-util/pull/9) feat: move out enquire from core package ([@aceHubert](https://github.com/aceHubert))
+
+#### Committers: 1
+- Hubert X ([@aceHubert](https://github.com/aceHubert))
+
+
+## @ace-util/core@0.5.0 (2025-01-17)
+
+#### :rocket: New Feature
+* `core`, `enquire`
+  * [#9](https://github.com/aceHubert/ace-util/pull/9) feat: move out enquire from core package ([@aceHubert](https://github.com/aceHubert))
+
+#### Committers: 1
+- Hubert X ([@aceHubert](https://github.com/aceHubert))
+
+
+## @ace-util/injects@0.3.4 (2024-12-18)
+
+#### :bug: Bug Fix
+* `core`, `injects`
+  * [#7](https://github.com/aceHubert/ace-util/pull/7) fix: ts type change ([@aceHubert](https://github.com/aceHubert))
+
+#### Committers: 1
+- Hubert X ([@aceHubert](https://github.com/aceHubert))
+
+
+## @ace-util/core@0.3.2 (2024-12-18)
+
+#### :bug: Bug Fix
+* `core`, `injects`
+  * [#7](https://github.com/aceHubert/ace-util/pull/7) fix: ts type change ([@aceHubert](https://github.com/aceHubert))
+
+#### Committers: 1
+- Hubert X ([@aceHubert](https://github.com/aceHubert))
+
+
 
 ## @ace-util/injects@0.3.2 (2024-08-30)
 
