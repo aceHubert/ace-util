@@ -38,7 +38,7 @@
     "url": "https://github.com/aceHubert/ace-util/issues"
   },
   "dependencies": {
-    "@ace-util/core": "^0.5.0",
+    "@ace-util/core": "workspace:^",
     "warning": "^4.0.3"
   },
   "devDependencies": {
