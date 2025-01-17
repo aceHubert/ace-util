@@ -9,12 +9,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ace-util/core@workspace:packages/core"
   dependencies:
+    "@ace-util/enquire": "workspace:^"
     "@types/lodash.get": ^4.4.7
     lodash.get: ^4.4.2
   languageName: unknown
   linkType: soft
 
-"@ace-util/enquire@workspace:packages/enquire":
+"@ace-util/enquire@workspace:^, @ace-util/enquire@workspace:packages/enquire":
   version: 0.0.0-use.local
   resolution: "@ace-util/enquire@workspace:packages/enquire"
   languageName: unknown

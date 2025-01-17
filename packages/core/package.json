@@ -37,6 +37,7 @@
     "url": "https://github.com/aceHubert/ace-util/issues"
   },
   "dependencies": {
+    "@ace-util/enquire": "workspace:^",
     "lodash.get": "^4.4.2"
   },
   "devDependencies": {
