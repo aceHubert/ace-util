@@ -1,6 +1,6 @@
 {
   "name": "@ace-util/injects",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "author": "Hubert<yi.xiang@live.com>",
   "description": "Utils.",
   "main": "lib/index.js",
@@ -38,7 +38,7 @@
     "url": "https://github.com/aceHubert/ace-util/issues"
   },
   "dependencies": {
-    "@ace-util/core": "^0.4.1",
+    "@ace-util/core": "^0.5.0",
     "warning": "^4.0.3"
   },
   "devDependencies": {

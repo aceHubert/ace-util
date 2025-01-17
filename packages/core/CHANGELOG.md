@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/aceHubert/ace-util/compare/@ace-util/core@0.4.1...@ace-util/core@0.5.0) (2025-01-17)
+
+### Bug Fixes
+
+- dependencies fix ([8683509](https://github.com/aceHubert/ace-util/commit/8683509233348a9d9bbeccebd8fe32f461e7e4f3))
+
+### Features
+
+- move out enquire from core package ([#9](https://github.com/aceHubert/ace-util/issues/9)) ([f4e9f90](https://github.com/aceHubert/ace-util/commit/f4e9f9062c3e4417bf983964b653e5c6cde4742b))
+
 ## [0.4.1](https://github.com/aceHubert/ace-util/compare/@ace-util/core@0.4.0...@ace-util/core@0.4.1) (2025-01-16)
 
 ### Performance Improvements
