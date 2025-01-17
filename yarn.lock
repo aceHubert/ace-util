@@ -14,6 +14,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ace-util/enquire@workspace:packages/enquire":
+  version: 0.0.0-use.local
+  resolution: "@ace-util/enquire@workspace:packages/enquire"
+  languageName: unknown
+  linkType: soft
+
 "@ace-util/injects@workspace:packages/injects":
   version: 0.0.0-use.local
   resolution: "@ace-util/injects@workspace:packages/injects"
