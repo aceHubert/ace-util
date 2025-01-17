@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.10](https://github.com/aceHubert/ace-util/compare/@ace-util/injects@0.3.9...@ace-util/injects@0.3.10) (2025-01-17)
+
+### Performance Improvements
+
+- dependencies workspace version ([3d0be61](https://github.com/aceHubert/ace-util/commit/3d0be6148a48637d70b118c13da4f9e906ff19c0))
+
 ## [0.3.9](https://github.com/aceHubert/ace-util/compare/@ace-util/injects@0.3.8...@ace-util/injects@0.3.9) (2025-01-17)
 
 **Note:** Version bump only for package @ace-util/injects
