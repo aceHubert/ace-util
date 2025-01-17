@@ -10,7 +10,7 @@
   "scripts": {
     "build": "lerna run build --sort --stream --scope='@ace-util/*'",
     "test": "jest --coverage --passWithNoTests",
-    "version": "lerna run build --sort --stream --scope='@ace-util/*'",
+    "version": "lerna run build:version --sort --stream --scope='@ace-util/*'",
     "prepublishOnly": "yarn install --mode=skip-build && yarn changelog && yarn build && yarn test",
     "release": "lerna publish",
     "release:git": "lerna publish from-git",
