@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/aceHubert/ace-util/compare/@ace-util/core@0.5.0...@ace-util/core@0.6.0) (2025-04-25)
+
+### Features
+
+- **core:** 优化类型检查函数并添加新功能 ([#10](https://github.com/aceHubert/ace-util/issues/10)) ([1c34dbb](https://github.com/aceHubert/ace-util/commit/1c34dbb148240c73c930e7d3e8a9a4d2324137ea))
+
 # [0.5.0](https://github.com/aceHubert/ace-util/compare/@ace-util/core@0.4.1...@ace-util/core@0.5.0) (2025-01-17)
 
 ### Bug Fixes
