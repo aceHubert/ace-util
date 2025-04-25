@@ -9,6 +9,7 @@ export function isUndefined(val: any): val is undefined {
 
 /**
  * alias to isUndefined
+ * @deprecated Use `isUndefined` instead. This alias may cause confusion due to inconsistent naming conventions.
  * @param val value
  * @returns true/false
  */
