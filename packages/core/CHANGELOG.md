@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/aceHubert/ace-util/compare/@ace-util/core@0.6.0...@ace-util/core@0.7.0) (2025-04-25)
+
+### Bug Fixes
+
+- type error ([41e0243](https://github.com/aceHubert/ace-util/commit/41e0243209ba127036cdb6666d362102e26cf665))
+
+### Features
+
+- add isNull function ([#11](https://github.com/aceHubert/ace-util/issues/11)) ([6e345d6](https://github.com/aceHubert/ace-util/commit/6e345d6eac049ca8d209c3456733be1e51018d9d))
+
 # [0.6.0](https://github.com/aceHubert/ace-util/compare/@ace-util/core@0.5.0...@ace-util/core@0.6.0) (2025-04-25)
 
 ### Features
