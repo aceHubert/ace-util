@@ -3,16 +3,24 @@
  * @param val value
  * @returns true/false
  */
-export function isUndef(val: unknown): val is undefined {
-  return val === void 0;
+export function isUndefined(val: any): val is undefined {
+  return typeof val === 'undefined';
 }
+
+/**
+ * alias to isUndefined
+ * @deprecated Use `isUndefined` instead. This alias may cause confusion due to inconsistent naming conventions.
+ * @param val value
+ * @returns true/false
+ */
+export const isUndef = isUndefined;
 
 /**
  * check if value is a array
  * @param val value
  * @returns true/false
  */
-export function isArray(val: unknown): val is any[] {
+export function isArray<T extends unknown>(val: any): val is T[] {
   return Array.isArray(val);
 }
 
@@ -21,7 +29,7 @@ export function isArray(val: unknown): val is any[] {
  * @param val value
  * @returns true/false
  */
-export function isObject(val: unknown): val is Record<any, any> {
+export function isObject<T extends object>(val: any): val is T {
   return val !== null && typeof val === 'object';
 }
 
@@ -31,8 +39,17 @@ const toString = (x: any) => Object.prototype.toString.call(x);
  * @param val value
  * @returns true/false
  */
-export function isPlainObject(val: unknown): val is Record<any, any> {
+export function isPlainObject<T extends object>(val: any): val is T {
   return toString(val) === '[object Object]';
+}
+
+/**
+ * check if value is a date
+ * @param val value
+ * @returns true/false
+ */
+export function isDate(val: any): val is Date {
+  return toString(val) === '[object Date]';
 }
 
 /**
@@ -40,7 +57,7 @@ export function isPlainObject(val: unknown): val is Record<any, any> {
  * @param val value
  * @returns true/false
  */
-export function isFunction(val: unknown): val is Function {
+export function isFunction<T extends Function>(val: any): val is T {
   return typeof val === 'function';
 }
 
