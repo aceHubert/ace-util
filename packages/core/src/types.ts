@@ -1,4 +1,13 @@
 /**
+ * check if value is null
+ * @param val value
+ * @returns true/false
+ */
+export function isNull(val: any): value is null {
+  return val === null;
+}
+
+/**
  * check if value is undefined
  * @param val value
  * @returns true/false
