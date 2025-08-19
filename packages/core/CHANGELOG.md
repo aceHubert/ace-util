@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.2](https://github.com/aceHubert/ace-util/compare/@ace-util/core@0.7.1...@ace-util/core@0.7.2) (2025-08-19)
+
+**Note:** Version bump only for package @ace-util/core
+
 ## [0.7.1](https://github.com/aceHubert/ace-util/compare/@ace-util/core@0.7.0...@ace-util/core@0.7.1) (2025-08-19)
 
 ### Bug Fixes
