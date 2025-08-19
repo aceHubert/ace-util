@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/aceHubert/ace-util/compare/@ace-util/core@0.7.0...@ace-util/core@0.7.1) (2025-08-19)
+
+### Bug Fixes
+
+- **core:** 修复企业微信检测逻辑 ([#12](https://github.com/aceHubert/ace-util/issues/12)) ([544b6e3](https://github.com/aceHubert/ace-util/commit/544b6e3765de0b522ce0f674630e4febf7e044e4))
+
 # [0.7.0](https://github.com/aceHubert/ace-util/compare/@ace-util/core@0.6.0...@ace-util/core@0.7.0) (2025-04-25)
 
 ### Bug Fixes
