@@ -3,7 +3,7 @@ export function isWechat(ua = navigator.userAgent) {
 }
 
 export function isWechatWork(ua = navigator.userAgent) {
-  return /wxwork/i.test(ua) && !/MicroMessenger/i.test(ua);
+  return /MicroMessenger/i.test(ua) && /wxwork/i.test(ua);
 }
 
 export function isWeibo(ua = navigator.userAgent) {
