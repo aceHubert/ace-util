@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.15](https://github.com/aceHubert/ace-util/compare/@ace-util/injects@0.3.14...@ace-util/injects@0.3.15) (2025-08-20)
+
+### Bug Fixes
+
+- **injects:** 优化 createInject 函数的初始化赋值和类型修改 ([#13](https://github.com/aceHubert/ace-util/issues/13)) ([ebf6363](https://github.com/aceHubert/ace-util/commit/ebf6363c688683b203fb0ac2ea2cdd2f62739842))
+
 ## [0.3.14](https://github.com/aceHubert/ace-util/compare/@ace-util/injects@0.3.13...@ace-util/injects@0.3.14) (2025-08-19)
 
 **Note:** Version bump only for package @ace-util/injects
