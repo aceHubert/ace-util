@@ -9,7 +9,7 @@ import { InjectFunction, InjectResult } from './types';
  * @param store Store
  */
 export function createInject<T extends Record<string, (...args: any) => any> = {}>(
-  store: Record<keyof T, InstanceType<typeof Inject>>,
+  store: { [K in keyof T]?: InstanceType<typeof Inject> } = {},
 ): InjectFunction<T> {
   function inject<K extends keyof T>(tag: K): InjectResult<T[K]>;
   function inject<K extends keyof T>(tag: K, functionToAdd: T[K], priority?: number, acceptedArgs?: number): void;
@@ -24,7 +24,7 @@ export function createInject<T extends Record<string, (...args: any) => any> = {
         store[tag] = new Inject();
       }
 
-      store[tag].addFilter(functionToAdd, priority, acceptedArgs);
+      store[tag]!.addFilter(functionToAdd, priority, acceptedArgs);
     } else {
       return {
         has(functionToCheck: T[K] | boolean) {
@@ -32,18 +32,18 @@ export function createInject<T extends Record<string, (...args: any) => any> = {
             return false;
           }
 
-          return store[tag].hasFilter(functionToCheck);
+          return store[tag]!.hasFilter(functionToCheck);
         },
         remove(functionToRemove: T[K], priority = 10) {
           let removed = false;
           if (hasOwn(store, tag)) {
-            removed = store[tag].removeFilter(functionToRemove, priority);
+            removed = store[tag]!.removeFilter(functionToRemove, priority);
           }
           return removed;
         },
         removeAll(priority: boolean | number) {
           if (hasOwn(store, tag)) {
-            store[tag].removeAllFilters(priority);
+            store[tag]!.removeAllFilters(priority);
           }
         },
         filter<T = unknown, R = T>(value: T, ...args: unknown[]) {
@@ -52,14 +52,14 @@ export function createInject<T extends Record<string, (...args: any) => any> = {
           }
 
           if (hasOwn(store, tag)) {
-            return store[tag].applyFilters<T, R>(value, ...args);
+            return store[tag]!.applyFilters<T, R>(value, ...args);
           }
 
           return Promise.resolve(value as unknown as R);
         },
         exec(...args: unknown[]) {
           if (hasOwn(store, tag)) {
-            return store[tag].doAction(...args);
+            return store[tag]!.doAction(...args);
           }
           return Promise.resolve();
         },
